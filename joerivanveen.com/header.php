@@ -118,7 +118,7 @@
 
 			<?php
 			if (is_single()) { // big image for single post right below menu
-				// for mobile use a seperate image
+				// for mobile use a separate image
 				$fb_thumb = wp_get_attachment_image_src($image_id, 'medium', false);
 				if(isset($fb_thumb[0]) && !empty($fb_thumb[0])) {
 					echo '

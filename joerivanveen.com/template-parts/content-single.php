@@ -90,7 +90,7 @@ function display_related_posts() {
 		?>
 		<aside class="related-posts widget">
 			<h3 class="widget-title">
-				<?php _e( 'Read these posts too', 'tutsplus' ); ?>:
+				<?php _e( 'Read these posts too', 'ruigehond' ); ?>:
 			</h3>
 			<ul class="related-posts wp-most-popular">
 				<?php
@@ -104,13 +104,13 @@ function display_related_posts() {
 							<li class="' . implode(get_post_class()) . '">
 							<div class="visualblocklinkforpostbyjoeri_wrapper">
 								<a class="visualblocklinkforpostbyjoeri" style="background-image:url(' . $thumbnail[0] . ');"
-									href="' . get_permalink() . '" title="' . rawurlencode(get_the_title()) . '">
+									href="' . get_permalink() . '">
 										<span>' . get_the_title() . '</span>
 								</a>
 							</div>
 							</li>
 						';
-						$item = apply_filters('wp_most_popular_list_item_single', $item, $post_id, $title, $post_class, $permalink);
+						//$item = apply_filters('wp_most_popular_list_item_single', $item, $post_id, $title, $post_class, $permalink);
 						echo $item;
 	 
 					}
