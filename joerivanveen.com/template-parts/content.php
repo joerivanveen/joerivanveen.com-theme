@@ -20,9 +20,9 @@
 		<span class="entry-date"><?php echo get_the_date(); ?></span>
 	</header><!-- .entry-header -->
 
-	<?php twentysixteen_excerpt(); ?>
+	<?php //twentysixteen_excerpt(); ?>
 
-	<div class="entry-content woefdram">
+	<div class="entry-content">
 		<?php
 		
 			//if ( is_front_page() || is_category() || is_author() || is_search() ) {
