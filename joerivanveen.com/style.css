@@ -5,8 +5,8 @@
  Author:       Joeri van Veen
  Author URI:   http://www.joerivanveen.com
  Template:     twentysixteen
- Version:      1.1.0
- Text Domain:  joerivanveen.com
+ Version:      1.0.1
+ Text Domain:  ruigehond
 */
 
 @import url("../twentysixteen/style.css");
@@ -189,6 +189,21 @@ a.more-link {
 	display: block;
 }
 
+.like_by_addthis {
+	position: relative;
+	overflow: hidden;
+	height: 1px;
+	z-index: 2;
+	transition: height .4s ease;
+}
+.like_by_addthis * {
+	display: inline-block;
+}
+.like_by_addthis a {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
 .warning {
 	color: #c00;
 }
@@ -296,7 +311,14 @@ ul.wp-most-popular li {
 	bottom: 0;
 	text-align: center;
 	text-shadow: 0 0 2px #333;
-	background: rgba(200,200,200,.35);
+	background: rgba(200,200,200,.35); /* For browsers that do not support gradients */
+    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(-50%,transparent),color-stop(50%,rgba(0,0,0,0.1)),color-stop(95%,rgba(0,0,0,0.5)),to(rgba(0,0,0,0.59)));
+    background-image: -webkit-linear-gradient(transparent 0%,transparent -50%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.5) 95%,rgba(0,0,0,0.59) 100%);
+    background-image: linear-gradient(transparent 0%,transparent -50%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.5) 95%,rgba(0,0,0,0.59) 100%);
+/*	background: -webkit-linear-gradient(left,rgba(187,187,187,0),rgba(187,187,187,1)); /*Safari 5.1-6*/
+/*	background: -o-linear-gradient(right,rgba(187,187,187,0),rgba(187,187,187,1)); /*Opera 11.1-12*/
+/*	background: -moz-linear-gradient(right,rgba(187,187,187,0),rgba(187,187,187,1)); /*Fx 3.6-15*/
+/*	background: linear-gradient(to right, rgba(187,187,187,0), rgba(187,187,187,1)); /*Standard*/
 }
 
 .visualblocklinkforpostbyjoeri:hover { /* same as post-thumbnail... */
@@ -469,10 +491,13 @@ article.post p {
 /**
  * Post single wide photograph (featured image)
  */
+.featured_photograph {
+	margin-bottom: 2em;
+}
 .featured_photograph.desktop {
 	width: 100%;
 	height: 45vw;
-	max-height: 70vh;
+	max-height: 70%;
 	background-size: cover;
 	background-position: center 20%;
 }
@@ -484,9 +509,6 @@ article.post p {
 /*
  * Post Title & date
  */
-h1.entry-title {
-	margin-top: 1em; /* right below featured image, or menu when image is absent */
-}
 .entry-header {
 	margin-bottom: 1em;
 }
@@ -517,6 +539,17 @@ h1.entry-title {
 }
 .newsletterform input {
 	margin-bottom: .5em;
+}
+.sidebar .soft-attention {
+	background-color: #ffe;
+	border: solid 1px #ffa;
+	padding: .5em;
+	margin: 0 -.5em;
+}
+.sidebar .soft-attention a {
+	text-decoration: none;
+	font-size: .9em;
+	color: inherit;
 }
 
 /**
