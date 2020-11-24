@@ -274,7 +274,14 @@ a.more-link {
 .button:hover {
 	color: #fff;
 }
-
+article.page ul li {
+	list-style-type: none;
+}
+article.page ul li:before {
+	content: '×';
+	color: darkred;
+	margin-right: .2em;
+}
 ul.wp-most-popular li {
 	list-style-type: none;
 	list-style-position: inside;
@@ -550,6 +557,11 @@ article.post p {
 	text-decoration: none;
 	font-size: .9em;
 	color: inherit;
+}
+/* faq */
+.entry-content h2.faq-header:first-child {
+	margin-top: .9em;
+	font-size: 1rem;
 }
 
 /**
