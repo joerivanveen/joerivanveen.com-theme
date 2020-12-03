@@ -274,10 +274,10 @@ a.more-link {
 .button:hover {
 	color: #fff;
 }
-article.page ul li {
+#post-2139 ul li {
 	list-style-type: none;
 }
-article.page ul li:before {
+#post-2139 ul li:before {
 	content: '×';
 	color: darkred;
 	margin-right: .2em;
