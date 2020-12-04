@@ -16,9 +16,6 @@
 		<div class="site-info">
 			&copy; Joeri van Veen
 		</div><!-- .site-info -->
-		<div>
-			<a id="toTop"><i class="genericon genericon-collapse"></i></a>
-		</div>
 	</footer><!-- .site-footer -->
 
 </div><!-- .site -->
