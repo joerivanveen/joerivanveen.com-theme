@@ -14,7 +14,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			&copy; Joeri van Veen
+            &copy; <a href="https://joerivanveen.com">Joeri van Veen</a>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->
 

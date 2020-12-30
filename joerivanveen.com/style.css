@@ -318,6 +318,18 @@ ul.wp-most-popular li {
 }
 
 /* user-reviews */
+#ruigehond008-user-reviews-header {
+	margin-top: 1em;
+}
+.user-review.posted .ruigehond008-copy:before {
+	content: 'hier';
+}
+.user-review.posted .ruigehond008-copy:after {
+	content: '';
+}
+.ruigehond008 .review_section.sharing .share-buttons {
+	display: block;
+}
 .ruigehond008.user-review .criterion .name, /* not necessary with the stars */
 .ruigehond008.user-review .criterion .rating, /* not necessary with the stars */
 /* no need to select anything in the form, you can only review the product on the page itself here */
@@ -334,7 +346,7 @@ ul.wp-most-popular li {
 	height: 100%;
 }
 form.ruigehond008 .invalid {
-	box-shadow: none !important;
+	/*box-shadow: none !important;*/
 }
 form.ruigehond008 .valid {
 	box-shadow: none !important;
