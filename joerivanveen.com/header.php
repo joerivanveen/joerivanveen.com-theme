@@ -1,38 +1,24 @@
-<?php
-/**
- * The template for displaying the header
- *
- * Displays all of the head element and everything up until the "site-content" div.
- *
- * @package WordPress
- * @subpackage Twenty_Sixteen / Modified for joerivanveen.com
- * @since Twenty Sixteen 1.0
- */
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<?php endif; ?>
 
 	<?php
 	if(is_singular())
 	{
-		if(has_post_thumbnail(get_the_ID(), 'blog_f'))
+		if(has_post_thumbnail(get_the_ID()))
 		{
 			$image_id = get_post_thumbnail_id(get_the_ID());
 			$fb_thumb = wp_get_attachment_image_src($image_id, 'full', true);
 		}
 
-		if(isset($fb_thumb[0]) && !empty($fb_thumb[0]))
+		if(isset($fb_thumb[0]))
 		{
 			$post_content = get_post_field('post_excerpt', $post->ID);
 		?>
 		<meta property="og:image" content="<?php echo esc_url($fb_thumb[0]); ?>"/>
+		<meta property="og:image_secure" content="<?php echo esc_url($fb_thumb[0]); ?>"/>
 		<meta property="og:title" content="<?php echo esc_attr(get_the_title()); ?>"/>
 		<meta property="og:url" content="<?php echo esc_url(get_permalink($post->ID)); ?>"/>
 		<meta property="og:description" content="<?php echo esc_attr(strip_tags($post_content)); ?>"/>
@@ -47,9 +33,9 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 		<?php
-		if (is_single() and isset($image_id)) { // big image for single post right below menu
+		if (is_single() && isset($image_id)) { // big image for single post right below menu
 			$fb_thumb = wp_get_attachment_image_src($image_id, 'full', false);
-			if(isset($fb_thumb[0]) && !empty($fb_thumb[0])) {
+			if(isset($fb_thumb[0])) {
 				echo '
 					<div class="featured_photograph desktop" style="background-image:url(\'' . $fb_thumb[0] . '\');">&nbsp;</div>
 					';
@@ -117,10 +103,10 @@
 		</header><!-- .site-header -->
 
 			<?php
-			if (is_single() and isset($image_id)) { // big image for single post right below menu
+			if (is_single() && isset($image_id)) { // big image for single post right below menu
 				// for mobile use a separate image
-				$fb_thumb = wp_get_attachment_image_src($image_id, 'medium', false);
-				if(isset($fb_thumb[0]) && !empty($fb_thumb[0])) {
+				$fb_thumb = wp_get_attachment_image_src($image_id, 'large', false);
+				if(isset($fb_thumb[0])) {
 					echo '
 						<img class="featured_photograph mobile" src="' . $fb_thumb[0] . '" alt=""/>
 						';

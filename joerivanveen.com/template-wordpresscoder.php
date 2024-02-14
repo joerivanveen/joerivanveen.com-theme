@@ -52,7 +52,7 @@ echo '<path class="petal" d="M10.5,45c-3.8-2-5.6-6-2-12.5s9.4-10.3,13.2-8.2s3.9,
 echo '<path class="petal" d="M1.7,16.2C3.1,12,6.9,9.5,14.3,12s12.2,8,10.7,12.2s-8.6,5.5-16,3S0.2,20.4,1.7,16.2z"/>';
 echo '</svg>';
 // please continue
-echo '<h2>Klaar met WP</h2><p>Klaar met WordPress? Ik geef je geen ongelijk. Check <a href="https://bloembraaden.io/">Bloembraaden</a>, een gloednieuwe manier om websites te bouwen voor frontend ontwikkelaars en designers.</p></section>';
+echo '<h2>Klaar met WP</h2><p>Klaar met WordPress? Ik geef je geen ongelijk. Kijk eens naar <a href="https://bloembraaden.io/">Bloembraaden</a>, een cloud platform dat handgemaakte websites host, die specifiek ontwikkeld zijn voor jouw doel.</p></section>';
 echo '</aside>';
 ?>
 
