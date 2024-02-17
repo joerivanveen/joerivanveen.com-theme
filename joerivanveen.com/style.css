@@ -697,8 +697,7 @@ article.post p {
     }
 
     .related-posts ul.wp-most-popular li {
-        display: block;
-        max-width: 100%;
+         max-width: 46%;
     }
 
     .like_by_addthis {
