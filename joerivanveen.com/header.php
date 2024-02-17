@@ -36,9 +36,7 @@
 		if (is_single() && isset($image_id)) { // big image for single post right below menu
 			$fb_thumb = wp_get_attachment_image_src($image_id, 'full', false);
 			if(isset($fb_thumb[0])) {
-				echo '
-					<div class="featured_photograph desktop" style="background-image:url(\'' . $fb_thumb[0] . '\');">&nbsp;</div>
-					';
+				echo '<div class="featured_photograph desktop" style="background-image:url(\'', $fb_thumb[0], '\');">&nbsp;</div>';
 			}
 		}
 		?>
@@ -107,9 +105,7 @@
 				// for mobile use a separate image
 				$fb_thumb = wp_get_attachment_image_src($image_id, 'large', false);
 				if(isset($fb_thumb[0])) {
-					echo '
-						<img class="featured_photograph mobile" src="' . $fb_thumb[0] . '" alt=""/>
-						';
+					echo '<img class="featured_photograph mobile" src="', $fb_thumb[0], '" alt=""/>';
 				}
 			}
 			?>

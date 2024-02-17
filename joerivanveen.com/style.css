@@ -5,11 +5,9 @@
  Author:       Joeri van Veen
  Author URI:   http://www.joerivanveen.com
  Template:     twentysixteen
- Version:      1.0.1
+ Version:      1.2.6
  Text Domain:  ruigehond
 */
-
-@import url("../twentysixteen/style.css");
 
 /**
  * Table of Contents
@@ -72,7 +70,6 @@ body:not(.custom-background-image):after {
 
 .widget .widget-title {
     font-family: inherit;
-    letter-spacing: 0;
     text-transform: none;
 }
 
@@ -86,7 +83,6 @@ body:not(.custom-background-image):after {
 
 .entry-content h4 {
     text-transform: none;
-    letter-spacing: 0;
 }
 
 .post-thumbnail {
@@ -115,13 +111,12 @@ body:not(.custom-background-image):after {
 
 aside {
     color: #333;
-    letter-spacing: 0;
 }
 
 /*
- * xxx
+ * .entry-footer as .entry-info
  */
-.single .entry-info {
+.single .entry-footer {
     float: left;
     width: 160px;
     margin: 0 12px 12px 0;
@@ -133,14 +128,14 @@ aside {
     width: 100% !important;
 }
 
-.single .entry-info, .single .entry-info a {
+.single .entry-footer, .single .entry-footer a {
     color: #999;
     font-size: 0.8125rem;
     line-height: 1.8;
 }
 
 @media screen and (max-width: 56.875em) {
-    .single .entry-info {
+    .single .entry-footer {
         margin-left: 7.6923%;
     }
 
@@ -150,24 +145,24 @@ aside {
 }
 
 @media screen and (max-width: 30em) {
-    .single .entry-info {
+    .single .entry-footer {
         display: block;
         float: none;
         width: 85%;
     }
 
-    .single .entry-info > span:not(:last-child):after {
+    .single .entry-footer > span:not(:last-child):after {
         content: "\002f";
         display: inline-block;
         opacity: 0.7;
         padding: 0 0.538461538em;
     }
 
-    .single .entry-info .byline {
+    .single .entry-footer .byline {
         display: block;
     }
 
-    .single .entry-info span.byline:after {
+    .single .entry-footer span.byline:after {
         content: "";
     }
 }
@@ -314,12 +309,15 @@ a.more-link {
     width: 50%;
     max-width: 50%;
 }
+
 .related-posts .wp-most-popular li:nth-child(odd) {
     margin-right: 2.5em;
 }
+
 .related-posts .wp-most-popular li:nth-child(even) {
-margin-right: 0;
+    margin-right: 0;
 }
+
 .wp-most-popular h3 {
     padding-top: .1rem;
     text-align: center;
@@ -637,6 +635,49 @@ article.post p {
     color: inherit;
 }
 
+/**
+ * 11.6 Footer
+ */
+.site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.site-footer section {
+    width: calc((100% - 3em) / 2);
+    padding: 1em;
+    background-color: rgba(0, 0, 0, .08);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer section svg {
+    max-height: 2.3em;
+    max-width: 2.3em;
+}
+
+.site-info {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+@media screen and (max-width: 56.875em) {
+    .site-footer section {
+        width: 100%;
+    }
+    .site-footer section:not(:first-of-type) {
+        margin-top: 2em;
+    }
+}
+
+@media screen and (min-width: 56.875em) {
+    .site-footer section:nth-child(even) {
+        margin-left: 1em;
+    }
+}
+
 /* faq */
 .entry-content h2.faq-header:first-child {
     margin-top: .9em;
@@ -646,6 +687,13 @@ article.post p {
 /**
  * corrections
  */
+figure.below-entry-meta,
+.wp-block-image,
+.wp-block-image > * {
+    margin-left: 0 !important;
+    width: 100%;
+}
+
 #page.site {
     margin: 0;
 }
@@ -663,7 +711,7 @@ article.post p {
 }
 
 .site-header.scroll {
-     background-color: rgba(250, 250, 250, .95);;
+    background-color: rgba(250, 250, 250, .95);;
 }
 
 .site-content {
@@ -697,7 +745,7 @@ article.post p {
     }
 
     .related-posts ul.wp-most-popular li {
-         max-width: 46%;
+        max-width: 46%;
     }
 
     .like_by_addthis {
