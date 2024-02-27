@@ -5,7 +5,7 @@
  Author:       Joeri van Veen
  Author URI:   http://www.joerivanveen.com
  Template:     twentysixteen
- Version:      1.2.6
+ Version:      1.2.7
  Text Domain:  ruigehond
 */
 
@@ -225,8 +225,7 @@ a.more-link {
 
     .site-header-menu {
         /*display: inline-flex;*/
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin: 0;
     }
 
     .site-header-menu .menu-item a {
@@ -237,7 +236,7 @@ a.more-link {
 
     .main-navigation {
         display: inline-block;
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     /**
@@ -707,11 +706,16 @@ figure.below-entry-meta,
 }
 
 .site-header {
-    background-color: rgba(250, 250, 250, 1);;
+    background-color: rgba(250, 250, 250, 1);
+    transition: margin-top .55s ease-in-out;
 }
 
 .site-header.scroll {
-    background-color: rgba(250, 250, 250, .95);;
+    background-color: rgba(250, 250, 250, .95);
+}
+
+.site-header.hidden {
+    margin-top: -100px;
 }
 
 .site-content {
