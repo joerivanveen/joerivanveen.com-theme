@@ -20,9 +20,7 @@
 		<span class="entry-date"><?php echo get_the_date(); ?></span>
 	</header><!-- .entry-header -->
 
-	<?php twentysixteen_excerpt(); ?>
-
-	<div class="entry-content woefdram">
+    <div class="entry-content woefdram">
 		<?php
 		
 			//if ( is_front_page() || is_category() || is_author() || is_search() ) {
@@ -54,18 +52,8 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+    <footer class="entry-footer">
 		<?php twentysixteen_entry_meta(); ?>
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer><!-- .entry-footer -->
+    </footer><!-- .entry-footer -->
+
 </article><!-- #post-## -->

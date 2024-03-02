@@ -15,17 +15,6 @@
 
     <div class="entry-footer">
 		<?php twentysixteen_entry_meta(); ?>
-		<?php
-		edit_post_link(
-			sprintf(
-			/* translators: %s: Name of current post */
-				__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-				get_the_title()
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
-		?>
     </div><!-- .entry-footer -->
 
     <div class="entry-content">
@@ -92,15 +81,13 @@ function display_related_posts() {
 
 					$query->the_post();
 
-					echo '<li class="', implode( ' ', get_post_class() ), '"><a href="', get_permalink(), '">';
+					echo '<li class="', implode( ' ', get_post_class() ), '"><a href="', get_permalink(), '" tabindex="-1">';
 					if ( has_post_thumbnail() ) {
 						echo '<div class="popular-image" style="background-image:url(', wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' )[0], ');"></div>';
-						echo '<h3>', get_the_title(), '</h3>';
-					} else {
-						echo '<h3>', get_the_title(), '</h3>';
-						echo '<p>', get_the_excerpt(), '</p>';
 					}
-					echo '</a></li>';
+					echo '<h3>', get_the_title(), '</h3></a>';
+					echo '<p>', get_the_excerpt(), '<a href="', get_permalink(), '" class="cta">Read more</a></p>';
+					echo '</li>';
 
 				}
 				?>

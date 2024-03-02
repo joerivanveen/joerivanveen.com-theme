@@ -5,7 +5,7 @@
  Author:       Joeri van Veen
  Author URI:   http://www.joerivanveen.com
  Template:     twentysixteen
- Version:      1.2.7
+ Version:      1.2.9
  Text Domain:  ruigehond
 */
 
@@ -73,6 +73,11 @@ body:not(.custom-background-image):after {
     text-transform: none;
 }
 
+.widget:first-of-type {
+    margin-bottom: 0;
+    clear: both;
+}
+
 .author-info {
     border-width: 0;
 }
@@ -90,6 +95,7 @@ body:not(.custom-background-image):after {
     overflow: hidden;
     background-position: center 20%;
     background-size: cover;
+    margin-bottom: 1rem;
 }
 
 .post-navigation {
@@ -171,9 +177,13 @@ aside {
  * 4.0 - Elements
  */
 body {
-    background: transparent;
+    background: rgb(247, 247, 247);
     font-family: Montserrat, "Helvetica Neue", sans-serif !important;
     letter-spacing: .01923em !important;
+}
+
+#page {
+    background-color: rgb(249, 249, 249);
 }
 
 .site-content .entry-header h1 {
@@ -248,6 +258,36 @@ a.more-link {
     }
 }
 
+p .cta {
+    display: table;
+    margin: .5em 0;
+    padding: 0 .35em;
+    border-radius: .3em;
+    background-color: #999;
+    color: #fff;
+}
+
+p .cta:focus-visible,
+p .cta:hover {
+    background-color: rgb(0, 122, 204); /*#007acc*/
+}
+
+p .cta:focus-visible {
+    outline: thin dotted;
+    outline-offset: -4px;
+}
+
+.plug {
+    padding: .8em;
+    border-radius: .3em;
+    background-color: rgba(0, 122, 204, .06);
+}
+
+.plug p .cta {
+    background-color: rgb(0, 122, 204);
+    font-weight: bold;
+}
+
 /*
  * 6.1 - Navigation (Adding searchbox to menu)
  * Searchbox in normal (screen) menu
@@ -319,7 +359,9 @@ a.more-link {
 
 .wp-most-popular h3 {
     padding-top: .36rem;
-    text-align: center;
+    text-align: left;
+    margin-bottom: 0;
+    color: #333;
 }
 
 .wp-most-popular .popular-image {
@@ -423,7 +465,7 @@ form.ruigehond008 .valid {
         top: 0;
         width: 100%;
         z-index: 10;
-        background-color: rgba(256, 256, 256, 0.95);
+        background-color: rgba(255, 255, 255, 0.95);
     }
 
     .admin-bar .site-header {
@@ -666,6 +708,7 @@ article.post p {
     .site-footer section {
         width: 100%;
     }
+
     .site-footer section:not(:first-of-type) {
         margin-top: 2em;
     }
@@ -706,12 +749,12 @@ figure.below-entry-meta,
 }
 
 .site-header {
-    background-color: rgba(250, 250, 250, 1);
+    background-color: rgba(247, 247, 247, 1);
     transition: margin-top .55s ease-in-out;
 }
 
 .site-header.scroll {
-    background-color: rgba(250, 250, 250, .95);
+    background-color: rgba(247, 247, 247, .95);
 }
 
 .site-header.hidden {
@@ -725,6 +768,13 @@ figure.below-entry-meta,
 .site {
     transition: padding-top .3s ease;
     padding-top: 40px;
+}
+
+a.post-thumbnail:hover,
+a.post-thumbnail:focus {
+    opacity: 1; /* no more stupid hovers */
+    outline: thin dotted;
+    outline-offset: -4px;
 }
 
 /**
