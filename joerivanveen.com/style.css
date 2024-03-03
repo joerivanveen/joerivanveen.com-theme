@@ -5,7 +5,7 @@
  Author:       Joeri van Veen
  Author URI:   http://www.joerivanveen.com
  Template:     twentysixteen
- Version:      1.2.9
+ Version:      1.2.10
  Text Domain:  ruigehond
 */
 
@@ -263,13 +263,13 @@ p .cta {
     margin: .5em 0;
     padding: 0 .35em;
     border-radius: .3em;
-    background-color: #999;
-    color: #fff;
+    background-color: #f3f3f3;
+    color: rgb(0, 122, 204); /*#007acc*/
 }
 
 p .cta:focus-visible,
 p .cta:hover {
-    background-color: rgb(0, 122, 204); /*#007acc*/
+    background-color: #fff;
 }
 
 p .cta:focus-visible {
@@ -280,12 +280,17 @@ p .cta:focus-visible {
 .plug {
     padding: .8em;
     border-radius: .3em;
-    background-color: rgba(0, 122, 204, .06);
+    background-color: rgba(17, 192, 0, 0.13);
 }
 
 .plug p .cta {
-    background-color: rgb(0, 122, 204);
+    background-color: rgb(17, 192, 0);
     font-weight: bold;
+    color: #fff;
+    transition: all .3s ease-out;
+}
+.plug p:hover .cta {
+    transform: scale(110%);
 }
 
 /*
@@ -362,6 +367,9 @@ p .cta:focus-visible {
     text-align: left;
     margin-bottom: 0;
     color: #333;
+}
+.wp-most-popular a:hover h3 {
+    color: rgb(0, 122, 204);
 }
 
 .wp-most-popular .popular-image {
