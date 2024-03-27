@@ -289,6 +289,7 @@ p .cta:focus-visible {
     color: #fff;
     transition: all .3s ease-out;
 }
+
 .plug p:hover .cta {
     transform: scale(110%);
 }
@@ -368,6 +369,7 @@ p .cta:focus-visible {
     margin-bottom: 0;
     color: #333;
 }
+
 .wp-most-popular a:hover h3 {
     color: rgb(0, 122, 204);
 }
@@ -543,6 +545,11 @@ form.ruigehond008 .valid {
     clear: both;
 }
 
+.is-screenshot img {
+    border-radius: 2%;
+    border: solid .5px #444;
+}
+
 @media screen and (min-width: 56.875em) {
     .post[data-column="odd"] .entry-content, .post[data-column="even"] .entry-content {
         width: 100% !important;
@@ -650,6 +657,17 @@ article.post p {
 
 .entry-header .entry-title {
     margin-bottom: 0 !important;
+}
+
+.wp-reading-progress-ert {
+    color: #686868;
+    #font-family: Montserrat, 'Helvetica Neue', sans-serif;
+}
+
+.entry-content .wp-reading-progress-ert {
+    font-size: 0.8em;
+    position: absolute;
+    transform: translateY(-2em);
 }
 
 .entry-header .entry-date {
