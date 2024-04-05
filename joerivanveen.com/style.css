@@ -659,17 +659,6 @@ article.post p {
     margin-bottom: 0 !important;
 }
 
-.wp-reading-progress-ert {
-    color: #686868;
-    #font-family: Montserrat, 'Helvetica Neue', sans-serif;
-}
-
-.entry-content .wp-reading-progress-ert {
-    font-size: 0.8em;
-    position: absolute;
-    transform: translateY(-2em);
-}
-
 .entry-header .entry-date {
     color: #686868;
     #font-family: Montserrat, 'Helvetica Neue', sans-serif;
