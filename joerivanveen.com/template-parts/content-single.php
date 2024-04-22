@@ -30,6 +30,12 @@
 			'separator'   => '<span class="screen-reader-text">, </span>',
 		) );
 
+		if ( ( $count = get_comments_number() ) ) {
+			echo '<div class="comments_nudge"><a href="#comments">', esc_html( sprintf( __( '%d Comments. Join the discussion.', 'joeri-van-veen' ), $count ) ), '</a></div>';
+		} elseif ( comments_open() ) {
+			echo '<div class="comments_nudge"><a href="#comments">', esc_html__( 'Leave your thoughts below.', 'joeri-van-veen' ), '</a></div>';
+		}
+
 		if ( '' !== get_the_author_meta( 'description' ) ) {
 			get_template_part( 'template-parts/biography' );
 		}
